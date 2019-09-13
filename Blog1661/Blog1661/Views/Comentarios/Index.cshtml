@@ -1,0 +1,55 @@
+﻿@model IEnumerable<WebApplication3.Models.Comentario>
+
+
+@{
+    ViewData["Title"] = "Comentario";
+}
+
+<h1>Comentario</h1>
+
+<p>
+    <button type="button" class="btn btn-success"><a asp-action="Create">Novo</a></button>
+</p>
+<table class="table table-bordered table-hover text-center">
+    <thead class="thead-light">
+        <tr>
+            <th>
+                Titulo
+            </th>
+            <th>
+                Descrição
+            </th>
+            <th>
+               Data do comentario
+            </th>
+            <th>
+                Autor
+            </th>
+            <th>Ação</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataDoComentario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Autor)
+            </td>
+            <td>
+                <button type="button" class="btn btn-warning" ><a asp-action="Edit" asp-route-id="@item.ComentarioId">Editar</a></button>
+                <button type="button" class="btn btn-danger" ><a asp-action="Delete" asp-route-id="@item.ComentarioId">Deletar</a></button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
