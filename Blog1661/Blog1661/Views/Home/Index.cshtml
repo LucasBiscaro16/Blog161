@@ -1,0 +1,102 @@
+﻿@model WebApplication3.ViewModel.VmMensagemComentario
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bem-vindo ao Blog do Serejo</h1>
+    <p>Esta blog foi desenvolvido pelo proprio Serejo, como avaliação do curso <a href="http://www.ms.senac.br/fabricadesoftware/">Fabrica de Software</a></p>
+</div>
+@*<table class="table table-bordered table-hover text-center">
+        <thead class="thead-light">
+            <tr>
+                <th>
+                    Titulo
+                </th>
+                <th>
+                    Descrição
+                </th>
+                <th>
+                    Data do comentario
+                </th>
+                <th>
+                    Autor
+                </th>
+                <th>Ação</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Comentarios)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Titulo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descricao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataDoComentario)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Autor)
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-warning"><a asp-action="Edit" asp-route-id="@item.ComentarioId">Editar</a></button>
+                        <button type="button" class="btn btn-danger"><a asp-action="Delete" asp-route-id="@item.ComentarioId">Deletar</a></button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <table class="table table-bordered table-hover text-center">
+        <thead class="thead-light">
+            <tr>
+                <th>
+                    Titulo
+                </th>
+                <th>
+                    Descrição
+                </th>
+                <th>
+                    Data
+                </th>
+                <th>
+                    Categorias
+                </th>
+                <th>
+                    Comentarios
+                </th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item2 in Model.Mensagems)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item2.Titulo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item2.Descricao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item2.Data)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item2.Categorias.CategoriaId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item2.Comentarios.ComentarioId)
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-warning"><a asp-action="Edit" asp-route-id="@item2.Id">Editar</a></button>
+                        <button type="button" class="btn btn-danger"><a asp-action="Delete" asp-route-id="@item2.Id">Deletar</a></button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>*@
+
